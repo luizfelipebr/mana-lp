@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meu Maná | Devocional diário e Mentores IA, com base na Bíblia</title>
+<meta name="description" content="Constância na sua caminhada de fé: devocional diário, Mentores IA inspirados nos apóstolos e trilhas de estudo, sempre com base na Bíblia. Planos a partir de R$19,90/mês.">
+<link rel="canonical" href="https://assine.meumana.app/">
+<meta name="theme-color" content="#E8A33D">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Meu Maná">
+<meta property="og:title" content="Meu Maná | Fé que se renova a cada manhã">
+<meta property="og:description" content="Devocional diário, Mentores IA inspirados nos apóstolos e trilhas de estudo, sempre com base na Bíblia. A partir de R$19,90/mês.">
+<meta property="og:url" content="https://assine.meumana.app/">
+<meta property="og:image" content="https://assine.meumana.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 284"><circle cx="142" cy="142" r="120" fill="%23E8A33D"/><path d="M 89.2 160 A 52.8 52.8 0 0 1 194.8 160 Z" fill="%23FAF4E8"/><line x1="70" y1="160" x2="214" y2="160" stroke="%23FAF4E8" stroke-width="9" stroke-linecap="round"/><line x1="100.63" y1="107.05" x2="87.33" y2="90.02" stroke="%23FAF4E8" stroke-width="7.44" stroke-linecap="round"/><line x1="142" y1="92.8" x2="142" y2="71.2" stroke="%23FAF4E8" stroke-width="7.44" stroke-linecap="round"/><line x1="183.37" y1="107.05" x2="196.67" y2="90.02" stroke="%23FAF4E8" stroke-width="7.44" stroke-linecap="round"/></svg>'>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --mel:#E8A33D;
+  --mel-escuro:#C9801C;
+  --creme:#FAF4E8;
+  --terra:#43291A;
+  --salvia:#5B8C7B;
+  --pessego:#E7A07A;
+  --branco:#FFFFFF;
+  --sombra:0 10px 30px rgba(67,41,26,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito Sans',system-ui,sans-serif;
+  background:var(--creme);
+  color:var(--terra);
+  line-height:1.6;
+  font-size:17px;
+}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;line-height:1.25}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.center{text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;font-weight:800;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--salvia);margin-bottom:14px;
+}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:14px}
+.sub{font-size:18px;max-width:640px;margin:0 auto;color:rgba(67,41,26,.85)}
+
+/* Botões */
+.btn{
+  display:inline-block;background:var(--mel);color:var(--terra);
+  font-weight:800;font-size:17px;text-decoration:none;
+  padding:16px 32px;border-radius:999px;border:2px solid var(--mel);
+  box-shadow:0 6px 18px rgba(232,163,61,.45);
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{background:var(--mel-escuro);border-color:var(--mel-escuro);color:var(--creme);transform:translateY(-2px)}
+.btn.grande{font-size:19px;padding:18px 40px}
+.btn.claro{background:var(--creme);border-color:var(--creme);color:var(--terra);box-shadow:none}
+.btn.claro:hover{background:var(--branco);border-color:var(--branco);color:var(--terra)}
+.btn-nota{font-size:14px;color:rgba(67,41,26,.7);margin-top:10px}
+
+/* Barra de aviso */
+.aviso{
+  background:var(--terra);color:var(--creme);text-align:center;
+  font-size:14px;font-weight:700;padding:9px 16px;
+}
+.aviso a{color:var(--mel);text-decoration:underline}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,244,232,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(67,41,26,.08);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:38px;height:38px}
+.logo b{font-family:'Lora',serif;font-size:21px;font-weight:600;color:var(--terra)}
+.nav .btn{padding:10px 22px;font-size:15px;box-shadow:none}
+
+/* Hero */
+.hero{padding:56px 0 64px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(32px,5vw,50px);margin-bottom:18px}
+.hero p.lead{font-size:19px;margin-bottom:14px;color:rgba(67,41,26,.9)}
+.hero .preco-ancora{font-weight:800;color:var(--terra);margin-bottom:24px}
+.selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.selo{
+  display:inline-flex;align-items:center;gap:7px;background:var(--branco);
+  border:1px solid rgba(67,41,26,.1);border-radius:999px;
+  font-size:13.5px;font-weight:700;padding:7px 14px;color:rgba(67,41,26,.85);
+}
+.selo span{color:var(--salvia)}
+
+/* Mockup de chat */
+.mock{
+  background:var(--branco);border-radius:24px;box-shadow:var(--sombra);
+  padding:22px;max-width:400px;margin:0 auto;border:1px solid rgba(67,41,26,.06);
+}
+.mock .mtopo{display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:1px solid rgba(67,41,26,.08);margin-bottom:14px}
+.mock .mtopo .avatar{width:38px;height:38px;border-radius:50%;background:var(--salvia);color:var(--creme);display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Lora',serif}
+.mock .mtopo b{font-size:15px}
+.mock .mtopo small{display:block;font-size:12px;color:var(--salvia);font-weight:700}
+.balao{max-width:85%;padding:11px 15px;border-radius:16px;font-size:14.5px;margin-bottom:10px;line-height:1.5}
+.balao.eu{background:var(--creme);margin-left:auto;border-bottom-right-radius:4px}
+.balao.mentor{background:rgba(91,140,123,.12);border-bottom-left-radius:4px}
+.mock .verso{
+  background:var(--creme);border-left:4px solid var(--mel);border-radius:10px;
+  padding:12px 14px;font-size:13.5px;margin-top:14px;font-style:italic;
+}
+.mock .verso b{display:block;font-style:normal;font-size:12px;color:var(--mel-escuro);margin-bottom:2px}
+
+/* Dor / empatia */
+.empatia{background:var(--branco)}
+.empatia .wrap{max-width:760px}
+.empatia p{font-size:18px;margin-top:14px;color:rgba(67,41,26,.9)}
+
+/* Recursos */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.card{
+  background:var(--branco);border-radius:18px;padding:26px;
+  border:1px solid rgba(67,41,26,.06);box-shadow:0 4px 14px rgba(67,41,26,.05);
+}
+.card .ico{
+  width:46px;height:46px;border-radius:12px;background:rgba(232,163,61,.16);
+  display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;
+}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:15px;color:rgba(67,41,26,.8)}
+
+/* Mentores */
+.mentores{background:var(--terra);color:var(--creme)}
+.mentores .kicker{color:var(--pessego)}
+.mentores .sub{color:rgba(250,244,232,.85)}
+.mentores .grade{grid-template-columns:repeat(4,1fr)}
+.mentor{
+  background:rgba(250,244,232,.06);border:1px solid rgba(250,244,232,.14);
+  border-radius:18px;padding:24px 20px;text-align:center;
+}
+.mentor .foto{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 14px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Lora',serif;font-size:24px;font-weight:600;color:var(--terra);
+}
+.mentor h3{font-size:19px;margin-bottom:4px;color:var(--creme)}
+.mentor .tema{font-size:13px;font-weight:800;color:var(--mel);margin-bottom:8px}
+.mentor p{font-size:14px;color:rgba(250,244,232,.8)}
+.mentores .nota{
+  margin-top:32px;text-align:center;font-size:14.5px;color:rgba(250,244,232,.75);
+  max-width:640px;margin-left:auto;margin-right:auto;
+}
+
+/* Como funciona */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;counter-reset:passo}
+.passo{background:var(--branco);border-radius:18px;padding:28px 24px;border:1px solid rgba(67,41,26,.06)}
+.passo .num{
+  width:40px;height:40px;border-radius:50%;background:var(--mel);color:var(--terra);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:14px;
+}
+.passo h3{font-size:19px;margin-bottom:8px}
+.passo p{font-size:15px;color:rgba(67,41,26,.8)}
+
+/* Transparência */
+.transparencia{background:var(--branco)}
+.transparencia .wrap{max-width:820px}
+.compromissos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.compromisso{
+  display:flex;gap:12px;background:var(--creme);border-radius:14px;padding:16px 18px;
+  font-size:15px;align-items:flex-start;
+}
+.compromisso span{color:var(--salvia);font-weight:800;font-size:18px;line-height:1.3}
+
+/* Planos */
+.planos-sec .grade{grid-template-columns:repeat(2,1fr);max-width:820px;margin-left:auto;margin-right:auto;align-items:stretch}
+.plano{
+  background:var(--branco);border-radius:22px;padding:34px 30px;position:relative;
+  border:2px solid rgba(67,41,26,.08);display:flex;flex-direction:column;
+}
+.plano.destaque{border-color:var(--mel);box-shadow:var(--sombra)}
+.tag-popular{
+  position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+  background:var(--mel);color:var(--terra);font-size:13px;font-weight:800;
+  padding:5px 16px;border-radius:999px;white-space:nowrap;
+}
+.plano h3{font-size:23px;margin-bottom:4px}
+.plano .para{font-size:14.5px;color:rgba(67,41,26,.7);margin-bottom:18px}
+.preco{font-family:'Lora',serif;font-size:40px;font-weight:600;line-height:1}
+.preco small{font-family:'Nunito Sans',sans-serif;font-size:16px;font-weight:700;color:rgba(67,41,26,.7)}
+.preco-de{font-size:15px;color:rgba(67,41,26,.55);text-decoration:line-through;margin-top:14px}
+.equivale{font-size:14.5px;font-weight:700;color:var(--salvia);margin:6px 0 18px}
+.plano ul{list-style:none;margin:0 0 26px;flex:1}
+.plano li{padding:7px 0;font-size:15.5px;display:flex;gap:10px;align-items:flex-start}
+.plano li b.ok{color:var(--salvia)}
+.cupom-box{
+  background:rgba(232,163,61,.14);border:1.5px dashed var(--mel-escuro);border-radius:12px;
+  padding:12px 14px;font-size:14px;margin-bottom:20px;
+}
+.cupom-box b{color:var(--mel-escuro)}
+.plano .btn{text-align:center}
+.garantias{margin-top:28px;text-align:center;font-size:14.5px;color:rgba(67,41,26,.75)}
+
+/* FAQ */
+.faq .wrap{max-width:760px}
+.faq details{
+  background:var(--branco);border-radius:14px;padding:18px 22px;margin-top:12px;
+  border:1px solid rgba(67,41,26,.07);
+}
+.faq summary{font-weight:800;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";font-size:22px;color:var(--mel-escuro);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:10px;font-size:15.5px;color:rgba(67,41,26,.85)}
+
+/* CTA final */
+.cta-final{background:linear-gradient(160deg,var(--mel) 0%,var(--pessego) 100%);text-align:center}
+.cta-final h2{color:var(--terra);font-size:clamp(28px,4vw,40px)}
+.cta-final p{max-width:560px;margin:12px auto 30px;color:rgba(67,41,26,.85);font-size:18px}
+
+/* Footer */
+footer{background:var(--terra);color:rgba(250,244,232,.8);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:18px}
+footer a{color:rgba(250,244,232,.85);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.tagline-footer{width:100%;text-align:center;margin-top:20px;font-family:'Lora',serif;font-style:italic;color:var(--mel);font-size:15px}
+
+/* CTA fixo mobile */
+.cta-fixo{
+  position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;
+  background:rgba(250,244,232,.96);backdrop-filter:blur(8px);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  border-top:1px solid rgba(67,41,26,.12);
+}
+.cta-fixo .btn{display:block;text-align:center;padding:14px}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .grade,.mentores .grade,.passos,.planos-sec .grade{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  section{padding:48px 0}
+  .grade,.mentores .grade,.passos,.planos-sec .grade,.compromissos{grid-template-columns:1fr}
+  .cta-fixo{display:block}
+  body{padding-bottom:76px}
+  .nav .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="aviso" id="aviso-cupom">
+  Cupom <b>FUNDADORMANA</b>: 30% off no plano anual para os 100 primeiros, até 31/07. <a href="#planos">Ver planos</a>
+</div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#" aria-label="Meu Maná">
+      <svg viewBox="0 0 284 284" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="142" cy="142" r="120" fill="#E8A33D"/><path d="M 89.2 160 A 52.8 52.8 0 0 1 194.8 160 Z" fill="#FAF4E8"/><line x1="70" y1="160" x2="214" y2="160" stroke="#FAF4E8" stroke-width="9" stroke-linecap="round"/><line x1="100.63" y1="107.05" x2="87.33" y2="90.02" stroke="#FAF4E8" stroke-width="7.44" stroke-linecap="round"/><line x1="142" y1="92.8" x2="142" y2="71.2" stroke="#FAF4E8" stroke-width="7.44" stroke-linecap="round"/><line x1="183.37" y1="107.05" x2="196.67" y2="90.02" stroke="#FAF4E8" stroke-width="7.44" stroke-linecap="round"/></svg>
+      <b>Meu Maná</b>
+    </a>
+    <a class="btn" href="#planos">Ver planos</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Mentoria espiritual cristã com IA</span>
+      <h1>Fé que se renova a cada manhã</h1>
+      <p class="lead">Devocional diário, Mentores IA inspirados nos apóstolos e trilhas de estudo, sempre com base na Bíblia. No seu ritmo, direto do seu celular, a qualquer hora.</p>
+      <p class="preco-ancora">Planos a partir de R$19,90/mês. Cancele quando quiser.</p>
+      <a class="btn grande js-cta" data-plano="hero" href="#planos">Quero começar hoje</a>
+      <p class="btn-nota">Leva menos de 2 minutos para começar.</p>
+      <div class="selos">
+        <span class="selo"><span>✔</span> Sempre com base na Bíblia</span>
+        <span class="selo"><span>✔</span> Pagamento seguro via Stripe</span>
+        <span class="selo"><span>✔</span> Cancele quando quiser</span>
+      </div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mtopo">
+        <div class="avatar">J</div>
+        <div><b>João IA</b><small>Mentor · Amor e intimidade com Deus</small></div>
+      </div>
+      <div class="balao eu">Como encontro paz num dia difícil?</div>
+      <div class="balao mentor">Que bom te ver por aqui. Vamos respirar e abrir o Salmo 34 juntos? Deus está perto de quem tem o coração quebrantado.</div>
+      <div class="verso">
+        <b>Devocional de hoje · Salmo 34:18</b>
+        "Perto está o Senhor dos que têm o coração quebrantado e salva os de espírito abatido."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPATIA -->
+<section class="empatia">
+  <div class="wrap center">
+    <h2>Quantas vezes você começou um devocional e parou no terceiro dia?</h2>
+    <p>A vida corre, a leitura fica para depois e aquela sensação de culpa aparece. Não é falta de amor por Deus. Na maioria das vezes, é falta de companhia e de constância.</p>
+    <p>O Meu Maná existe para caminhar com você: um devocional pronto para o seu dia, mentores para conversar a qualquer hora e trilhas de estudo que respeitam o seu tempo. Um dia de cada vez, sem cobrança e sem julgamento.</p>
+  </div>
+</section>
+
+<!-- RECURSOS -->
+<section id="recursos">
+  <div class="wrap center">
+    <span class="kicker">O que você recebe</span>
+    <h2>Tudo para a sua caminhada de fé, em um só lugar</h2>
+    <p class="sub">Ferramentas simples para crescer espiritualmente todos os dias, no seu tempo.</p>
+    <div class="grade" style="text-align:left">
+      <div class="card"><div class="ico">🌅</div><h3>Devocional diário</h3><p>Comece o dia com a Palavra e uma reflexão preparada para o seu momento, antes das notificações.</p></div>
+      <div class="card"><div class="ico">💬</div><h3>Mentores IA</h3><p>Converse com mentores inspirados nos apóstolos, sempre com base na Bíblia, a qualquer hora do dia ou da noite.</p></div>
+      <div class="card"><div class="ico">🛤️</div><h3>Trilhas de estudo</h3><p>Estudos bíblicos organizados passo a passo, por tema e no seu ritmo. Sem pressa e sem se perder.</p></div>
+      <div class="card"><div class="ico">🙏</div><h3>Oração e acolhimento</h3><p>Registre seus pedidos de oração e receba uma palavra de cuidado quando mais precisar.</p></div>
+      <div class="card"><div class="ico">🌱</div><h3>Seu progresso</h3><p>Veja sua constância e seus passos de fé de forma simples e encorajadora, nunca com cobrança.</p></div>
+      <div class="card"><div class="ico">📖</div><h3>Palavra para o seu dia</h3><p>Versículos e reflexões na hora certa, escolhidos para o que você está vivendo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORES -->
+<section class="mentores">
+  <div class="wrap center">
+    <span class="kicker">Conheça seus mentores</span>
+    <h2 style="color:var(--creme)">Mentores IA inspirados nos apóstolos</h2>
+    <p class="sub">Cada mentor tem um jeito de ensinar e um tema de vida. Todos acolhem, ensinam e apontam para a Escritura.</p>
+    <div class="grade">
+      <div class="mentor"><div class="foto" style="background:var(--mel)">P</div><h3>Paulo IA</h3><div class="tema">Doutrina, graça e perseverança</div><p>Ensino claro para firmar a sua fé.</p></div>
+      <div class="mentor"><div class="foto" style="background:var(--pessego)">J</div><h3>João IA</h3><div class="tema">Amor e intimidade com Deus</div><p>Aproxime o seu coração de Deus.</p></div>
+      <div class="mentor"><div class="foto" style="background:var(--salvia);color:var(--creme)">Pe</div><h3>Pedro IA</h3><div class="tema">Recomeço e restauração</div><p>Para quem caiu e quer levantar.</p></div>
+      <div class="mentor"><div class="foto" style="background:var(--creme)">T</div><h3>Tiago IA</h3><div class="tema">Fé prática no dia a dia</div><p>Fé que se vive em atitudes.</p></div>
+    </div>
+    <p class="nota">Os mentores são inteligência artificial, sinalizada com o sufixo IA. Eles acolhem e ensinam com base na Bíblia, mas não substituem o seu pastor, a sua igreja nem acompanhamento profissional.</p>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="wrap center">
+    <span class="kicker">Simples de verdade</span>
+    <h2>Como funciona</h2>
+    <div class="passos" style="text-align:left">
+      <div class="passo"><div class="num">1</div><h3>Escolha seu plano</h3><p>Assine em menos de 2 minutos, com pagamento seguro via Stripe. Sem fidelidade: cancele quando quiser.</p></div>
+      <div class="passo"><div class="num">2</div><h3>Receba seu devocional</h3><p>Todos os dias, uma palavra e uma reflexão para o seu momento, prontas antes de o dia começar.</p></div>
+      <div class="passo"><div class="num">3</div><h3>Caminhe acompanhado</h3><p>Converse com os Mentores IA, siga suas trilhas de estudo e acompanhe seus passos de fé.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSPARÊNCIA -->
+<section class="transparencia">
+  <div class="wrap center">
+    <span class="kicker">Nosso compromisso</span>
+    <h2>IA a serviço da sua fé, nunca no lugar da sua igreja</h2>
+    <p class="sub">Tecnologia com reverência e transparência. Estes compromissos guiam tudo dentro do Meu Maná:</p>
+    <div class="compromissos" style="text-align:left">
+      <div class="compromisso"><span>✔</span><div><b>Tudo se apoia na Bíblia.</b> As conversas e devocionais apontam para a Escritura, sem inventar doutrina.</div></div>
+      <div class="compromisso"><span>✔</span><div><b>IA sinalizada com clareza.</b> Você sempre sabe que está falando com um mentor de inteligência artificial.</div></div>
+      <div class="compromisso"><span>✔</span><div><b>Sua igreja vem primeiro.</b> O Meu Maná complementa a sua comunidade e o seu pastor, nunca os substitui.</div></div>
+      <div class="compromisso"><span>✔</span><div><b>Cuidado em temas delicados.</b> Em momentos difíceis, o mentor acolhe e encaminha para apoio humano e profissional.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos" class="planos-sec">
+  <div class="wrap center">
+    <span class="kicker">Planos e preços</span>
+    <h2>Escolha o ritmo da sua caminhada</h2>
+    <p class="sub">Menos que uma pizza por mês para caminhar com a Palavra todos os dias.</p>
+    <div class="grade" style="text-align:left;margin-top:48px">
+
+      <div class="plano">
+        <h3>Caminhada</h3>
+        <p class="para">Plano mensal, para começar hoje</p>
+        <div class="preco">R$19,90<small>/mês</small></div>
+        <p class="equivale">Renovação mensal, cancele quando quiser</p>
+        <ul>
+          <li><b class="ok">✔</b> Devocional diário completo</li>
+          <li><b class="ok">✔</b> Conversas com os Mentores IA</li>
+          <li><b class="ok">✔</b> Trilhas de estudo bíblico</li>
+          <li><b class="ok">✔</b> Pedidos de oração e acolhimento</li>
+          <li><b class="ok">✔</b> Acompanhamento do seu progresso</li>
+        </ul>
+        <a class="btn js-cta js-checkout" data-plano="caminhada" href="https://www.meumana.app/payment/checkout?planId=5c7b4cba-34f9-4c19-8809-4d282a35a2ac&type=plan">Assinar a Caminhada</a>
+      </div>
+
+      <div class="plano destaque">
+        <div class="tag-popular">Mais popular · 30% off</div>
+        <h3>Jornada</h3>
+        <p class="para">Plano anual, o melhor valor</p>
+        <p class="preco-de">De R$149/ano</p>
+        <div class="preco">R$104,30<small>/ano</small></div>
+        <p class="equivale">Sai por menos de R$9 por mês</p>
+        <ul>
+          <li><b class="ok">✔</b> Tudo do plano Caminhada</li>
+          <li><b class="ok">✔</b> Um ano inteiro de constância</li>
+          <li><b class="ok">✔</b> Economia de mais de 55% sobre o mensal</li>
+        </ul>
+        <div class="cupom-box" id="cupom-box">
+          <b>Cupom FUNDADORMANA aplicado neste botão:</b> 30% de desconto para os 100 primeiros assinantes, válido até 31/07. Depois disso, R$149/ano.
+        </div>
+        <a class="btn js-cta js-checkout" data-plano="jornada-fundador" href="https://www.meumana.app/payment/checkout?planId=99e1d70b-2603-4fc4-8635-63016cb562f1&type=plan&coupon=FUNDADORMANA">Assinar a Jornada com 30% off</a>
+      </div>
+
+    </div>
+    <p class="garantias">🔒 Pagamento processado pelo Stripe, líder mundial em pagamentos online. Você pode cancelar a renovação a qualquer momento, sem burocracia.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="kicker">Dúvidas comuns</span>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <details>
+      <summary>O Meu Maná substitui a minha igreja ou o meu pastor?</summary>
+      <p>Nunca. O Meu Maná é um apoio para a sua vida devocional no dia a dia. Ele complementa a sua comunidade, incentiva a sua presença na igreja e sempre aponta para a Palavra. Direção espiritual e comunhão acontecem com pessoas reais.</p>
+    </details>
+    <details>
+      <summary>Os mentores são pessoas de verdade?</summary>
+      <p>Não. São mentores de inteligência artificial, sempre sinalizados com o sufixo IA (como Paulo IA e João IA). Eles foram preparados para acolher e ensinar com base na Bíblia, com limites claros: não alegam revelação pessoal nem dão veredito doutrinário fechado.</p>
+    </details>
+    <details>
+      <summary>Qual linha doutrinária o Meu Maná segue?</summary>
+      <p>O conteúdo se apoia nos pontos de consenso da fé cristã: a Bíblia, a oração, Jesus e a vida com Deus. O Meu Maná não toma lado em divergências entre denominações e não trata de política.</p>
+    </details>
+    <details>
+      <summary>Preciso entender de tecnologia para usar?</summary>
+      <p>Não. Se você usa WhatsApp, consegue usar o Meu Maná. Funciona direto no navegador do celular ou do computador, sem instalar nada. Você conversa com os mentores como conversaria com um amigo.</p>
+    </details>
+    <details>
+      <summary>Como funciona o pagamento? É seguro?</summary>
+      <p>O pagamento é processado pelo Stripe, uma das maiores empresas de pagamento do mundo, com cartão de crédito. Nós não temos acesso aos dados do seu cartão. A assinatura renova automaticamente e você pode cancelar quando quiser.</p>
+    </details>
+    <details>
+      <summary>Como uso o cupom FUNDADORMANA?</summary>
+      <p>É automático: clicando no botão do plano Jornada aqui da página, o desconto de 30% já aparece aplicado no resumo da compra. A condição vale para os 100 primeiros assinantes, até 31/07.</p>
+    </details>
+    <details>
+      <summary>E se eu não gostar?</summary>
+      <p>Você cancela a renovação a qualquer momento, direto na plataforma, sem precisar falar com ninguém. Sem multa e sem fidelidade.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Pronto para caminhar com Deus todo dia?</h2>
+    <p>Amanhã de manhã, o seu devocional já pode estar esperando por você. Comece hoje a constância que você tanto quer.</p>
+    <a class="btn grande claro js-cta" data-plano="cta-final" href="#planos">Começar minha caminhada</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Meu Maná. Todos os direitos reservados.</span>
+    <nav>
+      <a href="https://www.meumana.app/about">Sobre</a>
+      <a href="https://xmentorai.com/privacy.html?lang=pt-BR">Privacidade</a>
+      <a href="https://xmentorai.com/terms.html?lang=pt-BR">Termos</a>
+      <a href="https://www.meumana.app/contact">Contato</a>
+      <a href="https://www.meumana.app/login">Já sou assinante</a>
+    </nav>
+    <div class="tagline-footer">Fé que se renova a cada manhã.</div>
+  </div>
+</footer>
+
+<div class="cta-fixo">
+  <a class="btn js-cta" data-plano="barra-fixa" href="#planos">Ver planos a partir de R$19,90/mês</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO
+   1) Meta Pixel: troque o valor abaixo pelo ID do seu pixel
+      (Gerenciador de Eventos > Fontes de dados). Enquanto for
+      o placeholder, o pixel simplesmente não carrega.
+   ============================================================ */
+var META_PIXEL_ID = "2010266610363010";
+
+/* Meta Pixel */
+if (META_PIXEL_ID && META_PIXEL_ID.indexOf("PIXEL_ID") === -1) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+  fbq('track', 'ViewContent', {content_name: 'lp-meumana'});
+}
+
+/* Propaga UTMs e fbclid da URL da página para os links de checkout */
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var keep = [];
+  params.forEach(function(v,k){
+    if (/^utm_/i.test(k) || k === 'fbclid') keep.push(k + '=' + encodeURIComponent(v));
+  });
+  if (!keep.length) return;
+  var qs = keep.join('&');
+  document.querySelectorAll('a.js-checkout, footer a[href*="meumana.app"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + qs;
+  });
+})();
+
+/* Evento de conversão nos botões de checkout */
+document.querySelectorAll('a.js-checkout').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (window.fbq) fbq('track', 'InitiateCheckout', {content_name: a.dataset.plano || 'plano'});
+  });
+});
+
+/* Depois de 31/07/2026, esconde o cupom e volta o anual para R$149 */
+(function(){
+  var fim = new Date('2026-08-01T03:00:00Z'); /* 31/07 23:59 no Brasil */
+  if (new Date() < fim) return;
+  var aviso = document.getElementById('aviso-cupom'); if (aviso) aviso.style.display = 'none';
+  var box = document.getElementById('cupom-box'); if (box) box.style.display = 'none';
+  var card = document.querySelector('.plano.destaque');
+  if (card) {
+    card.querySelector('.tag-popular').textContent = 'Mais popular';
+    card.querySelector('.preco-de').style.display = 'none';
+    card.querySelector('.preco').innerHTML = 'R$149<small>/ano</small>';
+    card.querySelector('.equivale').textContent = 'Sai por cerca de R$12,40 por mês';
+    var btn = card.querySelector('a.js-checkout');
+    btn.href = btn.href.replace(/&coupon=FUNDADORMANA/i, '');
+    btn.textContent = 'Assinar a Jornada';
+  }
+})();
+</script>
+</body>
+</html>
